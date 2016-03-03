@@ -1,4 +1,4 @@
-package es.beni.testing;
+package es.beni.testing.exercise5;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.dto.Stock;
 
 
 public class Portfolio {

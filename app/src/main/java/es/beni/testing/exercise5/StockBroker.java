@@ -1,8 +1,8 @@
-package es.beni.testing;
+package es.beni.testing.exercise5;
 
 import java.math.BigDecimal;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.dto.Stock;
 
 public class StockBroker {
 	private final static BigDecimal LIMIT = new BigDecimal("0.10");

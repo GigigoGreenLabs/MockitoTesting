@@ -1,10 +1,12 @@
 package es.beni.testing;
 
+import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -21,16 +23,12 @@ public class Example9 {
 
     Stock globalStock = when(mock(Stock.class).getPrice()).thenReturn(BigDecimal.TEN).getMock();
 
+    @Test
     public void testGlobalMock() throws Exception {
         assertEquals(BigDecimal.TEN, globalStock.getPrice());
 
-//        globalStock.updatePrice(BigDecimal.ONE);
+        globalStock.updatePrice(BigDecimal.ONE);
     }
-
-    public void testGlobalMock2() throws Exception {
-        assertEquals(BigDecimal.ONE, globalStock.getPrice());
-    }
-
 
     public void testMockingDetail() throws Exception {
         Portfolio portfolio = mock(Portfolio.class, RETURNS_MOCKS);

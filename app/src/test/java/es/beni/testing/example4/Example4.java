@@ -1,10 +1,7 @@
 package es.beni.testing.example4;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.invocation.InvocationOnMock;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 
 import java.math.BigDecimal;
@@ -13,8 +10,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.beni.testing.Portfolio;
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.isA;
@@ -24,7 +21,7 @@ import static org.mockito.Mockito.when;
 /**
  * Created by beni on 12/12/15.
  */
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class Example4 {
 
     Map<String, List<Stock>> stockMap = new HashMap<>();
@@ -66,7 +63,7 @@ public class Example4 {
     @Mock
     Portfolio portfolio;
 
-    @Test
+//    @Test
     public void testAnswering() throws Exception {
         stockMap.clear();
 

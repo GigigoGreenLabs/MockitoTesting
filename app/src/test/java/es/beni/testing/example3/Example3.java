@@ -1,17 +1,14 @@
 package es.beni.testing.example3;
 
 import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 
-import es.beni.testing.MarketWatcher;
-import es.beni.testing.Portfolio;
-import es.beni.testing.StockBroker;
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.MarketWatcher;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.StockBroker;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.mockito.Mockito.argThat;
 import static org.mockito.Mockito.isA;
@@ -22,7 +19,7 @@ import static org.mockito.Mockito.when;
 /**
  * Created by beni on 12/12/15.
  */
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class Example3 {
 
     @Mock
@@ -39,7 +36,7 @@ public class Example3 {
         stockBroker = new StockBroker(marketWatcher);
     }
 
-    @Test
+//    @Test
     public void testArgumentMatcher() throws Exception {
         when(portfolio.getAvgPrice(isA(Stock.class))).thenReturn(new BigDecimal("10.00"));
 

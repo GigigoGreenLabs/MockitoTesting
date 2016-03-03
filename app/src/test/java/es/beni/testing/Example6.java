@@ -6,7 +6,10 @@ import org.mockito.Mock;
 
 import java.math.BigDecimal;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.MarketWatcher;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.StockBroker;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.anyString;
@@ -20,9 +23,11 @@ import static org.mockito.Mockito.when;
 //@RunWith(MockitoJUnitRunner.class)
 public class Example6 {
 
-    @Mock Portfolio portfolio;
+    @Mock
+    Portfolio portfolio;
 
-    @Mock MarketWatcher marketWatcher;
+    @Mock
+    MarketWatcher marketWatcher;
 
     private StockBroker stockBroker;
 

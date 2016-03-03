@@ -6,7 +6,9 @@ import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.MarketWatcher;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.isA;
@@ -17,9 +19,11 @@ import static org.mockito.Matchers.isA;
 //@RunWith(MockitoJUnitRunner.class)
 public class Example7 {
 
-    @Mock Portfolio portfolio;
+    @Mock
+    Portfolio portfolio;
 
-    @Mock MarketWatcher marketWatcher;
+    @Mock
+    MarketWatcher marketWatcher;
 
 //    @Test
     public void testInOrder() throws Exception {

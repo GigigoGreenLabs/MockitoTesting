@@ -1,14 +1,12 @@
 package es.beni.testing;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.any;
@@ -22,12 +20,12 @@ import static org.mockito.Mockito.when;
  * Created by beni on 12/12/15.
  */
 
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class Example2 {
 
     @Mock List<String> mockedList;
 
-    @Test
+//    @Test
     public void testVerify1() throws Exception {
         //stubbing using anyInt() argument matcher
         when(mockedList.get(anyInt())).thenReturn("element");
@@ -39,9 +37,10 @@ public class Example2 {
         verify(mockedList).get(anyInt());
     }
 
-    @Mock Portfolio portfolio;
+    @Mock
+    Portfolio portfolio;
 
-    @Test(expected = IllegalStateException.class)
+//    @Test(expected = IllegalStateException.class)
     public void testVerifyExceptions() throws Exception {
         when(portfolio.getAvgPrice(isA(Stock.class))).thenThrow(new IllegalStateException("Database is down"));
 
@@ -49,14 +48,14 @@ public class Example2 {
     }
 
 
-    @Test(expected = IllegalStateException.class)
+//    @Test(expected = IllegalStateException.class)
     public void testVerifyVoidExceptions() throws Exception {
         doThrow(new IllegalStateException()).when(portfolio).buy(isA(Stock.class));
 
         portfolio.buy(new Stock(null, null, null));
     }
 
-    @Test
+//    @Test
     public void testConsecutiveCalls() throws Exception {
         when(portfolio.getAvgPrice(any(Stock.class)))
                 .thenReturn(BigDecimal.TEN, BigDecimal.ONE, BigDecimal.ZERO);
@@ -67,7 +66,7 @@ public class Example2 {
         assertEquals(BigDecimal.ZERO, portfolio.getAvgPrice(any(Stock.class)));
     }
 
-    @Test
+//    @Test
     public void testConsecutiveCalls1() throws Exception {
         Stock stock = new Stock(null, null, null);
 
@@ -79,7 +78,7 @@ public class Example2 {
         }
     }
 
-    @Test(expected = StackOverflowError.class)
+//    @Test(expected = StackOverflowError.class)
     public void testCOnsecutiveCallsException() throws Exception {
         Stock stock = new Stock(null, null, null);
 

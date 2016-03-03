@@ -1,4 +1,4 @@
-package es.beni.testing.dto;
+package es.beni.testing.exercise5.dto;
 
 import java.math.BigDecimal;
 

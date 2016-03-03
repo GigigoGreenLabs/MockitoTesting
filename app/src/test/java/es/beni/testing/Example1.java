@@ -2,7 +2,9 @@ package es.beni.testing;
 
 import org.mockito.Mock;
 
-import es.beni.testing.dto.Stock;
+import es.beni.testing.exercise5.MarketWatcher;
+import es.beni.testing.exercise5.Portfolio;
+import es.beni.testing.exercise5.dto.Stock;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -13,8 +15,10 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 //@RunWith(MockitoJUnitRunner.class)
 public class Example1 {
 
-    @Mock Portfolio portfolio;
-    @Mock MarketWatcher marketWatcher;
+    @Mock
+    Portfolio portfolio;
+    @Mock
+    MarketWatcher marketWatcher;
 
 //    @Test
     public void testVerifyZeroInteractions() throws Exception {
